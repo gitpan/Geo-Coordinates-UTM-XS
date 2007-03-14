@@ -7,7 +7,7 @@ use Carp;
 
 BEGIN {
 
-  our $VERSION = '0.01';
+  our $VERSION = '0.02';
 
   require XSLoader;
   XSLoader::load('Geo::Coordinates::UTM::XS', $VERSION);
@@ -16,7 +16,7 @@ BEGIN {
 
 require Exporter;
 our @ISA=qw(Exporter);
-our @EXPORT  = qw( latlon_to_utm  utm_to_latlon
+our @EXPORT  = qw( latlon_to_utm latlon_to_utm_force_zone utm_to_latlon
                    ellipsoid_info ellipsoid_names);
 
 use Geo::Coordinates::UTM;
@@ -46,6 +46,7 @@ sub _ellipsoid_index {
 {
     no warnings;
     *latlon_to_utm = \&_latlon_to_utm;
+    *latlon_to_utm_force_zone = \&_latlon_to_utm_force_zone;
     *utm_to_latlon = \&_utm_to_latlon;
 }
 
@@ -73,6 +74,11 @@ implementation.
 
 Read L<Geo::Coordinates::UTM> to learn how to use this module.
 
+=head1 BUGS
+
+Functions to convert coordinates to MGRS available from
+Geo::Coordinates::UTM 0.06 are not yet supported.
+
 =head1 AUTHOR
 
 Salvador FandiE<ntilde>o E<lt>sfandino@yahoo.comE<gt>
@@ -80,7 +86,9 @@ Salvador FandiE<ntilde>o E<lt>sfandino@yahoo.comE<gt>
 =head1 COPYRIGHT AND LICENSE
 
 Copyright (c) 2007 by Salvador Fandino.
+
 Copyright (c) 2007 by Qindel Formacion y Servicios SL.
+
 Copyright (c) 2000, 2002, 2004 by Graham Crookham.
 
 This library is free software; you can redistribute it and/or modify
