@@ -297,7 +297,6 @@ PPCODE:
     {
         int index;
         double radius, inv_radius, eccentricity_2, eccentricity_4, eccentricity_6, eccentricity_prime_2;
-        index = ellipsoid_index(aTHX_ ename);
         double x, y;
         double longitude_origin_deg;
         double M, mu, e1, e1_2, e1_3, e1_4, phi1, N1, N2, N3, tan_phi1_2, C1, C1_2, R1, D, D_2, D_3, D_4, D_5, D_6;
@@ -306,6 +305,8 @@ PPCODE:
         int zone_number;
         char zone_letter;
         int i, zone_ok;
+
+        index = ellipsoid_index(aTHX_ ename);
         
         if (index < 1 || index >= MAX_ELLIPSOIDS || !ellipsoids[index].defined) {
             Perl_croak(aTHX_ "invalid ellipsoid index %i", index);

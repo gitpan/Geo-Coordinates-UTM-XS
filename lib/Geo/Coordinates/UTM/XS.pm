@@ -7,7 +7,7 @@ use Carp;
 
 BEGIN {
 
-  our $VERSION = '0.02';
+  our $VERSION = '0.03';
 
   require XSLoader;
   XSLoader::load('Geo::Coordinates::UTM::XS', $VERSION);
@@ -15,7 +15,7 @@ BEGIN {
 }
 
 require Exporter;
-our @ISA=qw(Exporter);
+our @ISA = qw(Exporter);
 our @EXPORT  = qw( latlon_to_utm latlon_to_utm_force_zone utm_to_latlon
                    ellipsoid_info ellipsoid_names);
 
@@ -85,9 +85,9 @@ Salvador FandiE<ntilde>o E<lt>sfandino@yahoo.comE<gt>
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright (c) 2007 by Salvador Fandino.
+Copyright (c) 2007-2008 by Salvador Fandino.
 
-Copyright (c) 2007 by Qindel Formacion y Servicios SL.
+Copyright (c) 2007-2008 by Qindel Formacion y Servicios SL.
 
 Copyright (c) 2000, 2002, 2004 by Graham Crookham.
 

@@ -1,3 +1,6 @@
+
+require 5.006;
+
 use ExtUtils::MakeMaker;
 
 WriteMakefile( NAME => 'Geo::Coordinates::UTM::XS',

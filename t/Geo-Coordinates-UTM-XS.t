@@ -3,7 +3,7 @@
 use Test::More tests => 9991;
 BEGIN { use_ok('Geo::Coordinates::UTM::XS') };
 
-use constant maxerror => 1e-2;
+use constant maxerror => 1e-3;
 
 use warnings;
 use strict;
