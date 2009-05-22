@@ -7,7 +7,7 @@ use Carp;
 
 BEGIN {
 
-  our $VERSION = '0.03';
+  our $VERSION = '0.04';
 
   require XSLoader;
   XSLoader::load('Geo::Coordinates::UTM::XS', $VERSION);
@@ -85,7 +85,7 @@ Salvador FandiE<ntilde>o E<lt>sfandino@yahoo.comE<gt>
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright (c) 2007-2008 by Salvador Fandino.
+Copyright (c) 2007-2008 by Salvador FandiE<ntilde>o.
 
 Copyright (c) 2007-2008 by Qindel Formacion y Servicios SL.
 

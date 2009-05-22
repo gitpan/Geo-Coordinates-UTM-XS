@@ -1,5 +1,9 @@
 Revision history for Perl extension Geo::Coordinates::UTM::XS.
 
+0.04  May 22, 2009
+        - corrected error on the algorithm to convert from UTM to
+          latlon (bug report by Pablo Torres).
+
 0.03  Jan 8, 2008
         - require perl 5.6
         - pre C99 bug corrected on XS code

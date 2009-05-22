@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:                Geo-Coordinates-UTM-XS
-version:             0.03
+version:             0.04
 abstract:            C/XS reimplementation of Geo::Coordinates::UTM
 license:             ~
 author:              
@@ -8,7 +8,7 @@ author:
 generated_by:        ExtUtils::MakeMaker version 6.42
 distribution_type:   module
 requires:     
-    Geo::Coordinates::UTM:         0.05
+    Geo::Coordinates::UTM:         0.08
     Test::More:                    0
 meta-spec:
     url:     http://module-build.sourceforge.net/META-spec-v1.3.html
